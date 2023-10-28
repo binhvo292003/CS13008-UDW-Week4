@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Calculator</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="title">Bé tập tính</div>
+        <div>
+            <div class="number-title">Số thứ nhất</div>
+            <input id="first-number" class="number-input" />
+        </div>
+        <div>
+            <div class="number-title">Số thứ hai</div>
+            <input id="second-number" class="number-input" />
+        </div>
+        <div>
+            <div class="result-title">Kết quả</div>
+            <input id="result" type="number" disabled />
+        </div>
+        <div class="operator-container">
+            <input type="radio" id="plus" name="operator" value="PLUS" />
+            <label for="plus">Cộng</label><br />
+            <input type="radio" id="minus" name="operator" value="MINUS" />
+            <label for="minus">Trừ</label><br />
+            <input
+                type="radio"
+                id="multiply"
+                name="operator"
+                value="MULTIPLY"
+            />
+            <label for="multiply">Nhân</label><br />
+            <input
+                type="radio"
+                id="division"
+                name="operator"
+                value="DIVISION"
+            />
+            <label for="division">Chia</label><br />
+        </div>
+        <button id="button-result">Tính</button>
+        <button id="button-clear">Clear</button>
+        <div id="error-message"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
