@@ -15,15 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function calculate() {
-    if (isEmpty(first.value) || isEmpty(second.value)) {
+    if (isEmpty(first.value)) {
         if (errorMessage) {
-            errorMessage.textContent = "Enter a number";
+            errorMessage.textContent = "Nhập số thứ nhất";
+        }
+        return;
+    } else if (isEmpty(second.value)) {
+        if (errorMessage) {
+            errorMessage.textContent = "Nhập số thứ hai";
         }
         return;
     }
-    if (!isNumeric(first.value) || !isNumeric(second.value)) {
+    if (!isNumeric(first.value)) {
         if (errorMessage) {
-            errorMessage.textContent = "Enter a valid number";
+            errorMessage.textContent = "Số thứ nhất không hợp lệ";
+        }
+        return;
+    } else if (!isNumeric(second.value)) {
+        if (errorMessage) {
+            errorMessage.textContent = "Số thứ hai không hợp lệ";
         }
         return;
     }
@@ -56,14 +66,15 @@ function calculate() {
                     result = firstNumber / secondNumber;
                 } else {
                     if (errorMessage) {
-                        errorMessage.textContent = "Cannot divide by zero";
+                        errorMessage.textContent = "Số thứ hai phải khác 0";
                     }
                     return;
                 }
                 break;
             default:
                 if (errorMessage) {
-                    errorMessage.textContent = "Select an operation";
+                    errorMessage.textContent = "Chọn phép tính";
+                    return;
                 }
         }
 
@@ -73,7 +84,7 @@ function calculate() {
         }
     } else {
         if (errorMessage) {
-            errorMessage.textContent = "Select an operation";
+            errorMessage.textContent = "Chọn phép tính";
         }
     }
 }

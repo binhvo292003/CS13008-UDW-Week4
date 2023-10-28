@@ -13,42 +13,70 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="title">Bé tập tính</div>
-        <div>
-            <div class="number-title">Số thứ nhất</div>
-            <input id="first-number" class="number-input" />
+        <div class="container">
+            <div class="row">
+                <div class="title col-md-6">Bé tập tính</div>
+                <div class="col-md-6"></div>
+            </div>
         </div>
-        <div>
-            <div class="number-title">Số thứ hai</div>
-            <input id="second-number" class="number-input" />
+
+        <div class="container">
+            <div class="row">
+                <div class="input-field col-md-6">
+                    <div>
+                        <div class="number-title">Số thứ nhất</div>
+                        <input id="first-number" class="number-input" />
+                    </div>
+                    <div>
+                        <div class="number-title">Số thứ hai</div>
+                        <input id="second-number" class="number-input" />
+                    </div>
+                    <div>
+                        <div class="result-title">Kết quả</div>
+                        <input id="result" type="number" disabled />
+                    </div>
+                    <div class="message">
+                        <div id="error-title">Thông báo:</div>
+                        <div id="error-message"></div>
+                    </div>
+                </div>
+                <div class="button-field col-md-6">
+                    <div class="operator-container">
+                        <input
+                            type="radio"
+                            id="plus"
+                            name="operator"
+                            value="PLUS"
+                        />
+                        <label for="plus">Cộng</label><br />
+                        <input
+                            type="radio"
+                            id="minus"
+                            name="operator"
+                            value="MINUS"
+                        />
+                        <label for="minus">Trừ</label><br />
+                        <input
+                            type="radio"
+                            id="multiply"
+                            name="operator"
+                            value="MULTIPLY"
+                        />
+                        <label for="multiply">Nhân</label><br />
+                        <input
+                            type="radio"
+                            id="division"
+                            name="operator"
+                            value="DIVISION"
+                        />
+                        <label for="division">Chia</label><br />
+                    </div>
+                    <button id="button-result">Tính</button>
+                    <button id="button-clear">Clear</button>
+                </div>
+            </div>
         </div>
-        <div>
-            <div class="result-title">Kết quả</div>
-            <input id="result" type="number" disabled />
-        </div>
-        <div class="operator-container">
-            <input type="radio" id="plus" name="operator" value="PLUS" />
-            <label for="plus">Cộng</label><br />
-            <input type="radio" id="minus" name="operator" value="MINUS" />
-            <label for="minus">Trừ</label><br />
-            <input
-                type="radio"
-                id="multiply"
-                name="operator"
-                value="MULTIPLY"
-            />
-            <label for="multiply">Nhân</label><br />
-            <input
-                type="radio"
-                id="division"
-                name="operator"
-                value="DIVISION"
-            />
-            <label for="division">Chia</label><br />
-        </div>
-        <button id="button-result">Tính</button>
-        <button id="button-clear">Clear</button>
-        <div id="error-message"></div>
+
         <script src="script.js"></script>
     </body>
 </html>
